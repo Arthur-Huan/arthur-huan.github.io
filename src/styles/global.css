@@ -1,0 +1,124 @@
+:root {
+  --bg: #131324;
+  --bg-raised: #262648;
+  --fg: #ffffff;
+  --fg-soft: #efefef;
+  --border: #D9D4C7;
+  --primary: #40a02b;
+  --primary-dim: #afc8af;
+
+  --font-serif: 'IBM Plex Serif';
+  --font-sans: 'IBM Plex Sans';
+  --font-mono: 'IBM Plex Mono';
+
+  --radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+h1 {
+  font-family: var(--font-serif), serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.note {
+  color: var(--fg-soft);
+}
+
+.wrap {
+  width: min(1040px, 100% - 3rem);
+  margin-inline: auto;
+}
+
+.project-page {
+  padding: clamp(3rem, 8vh, 5rem) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 720px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.back {
+  font-family: var(--font-mono), monospace;
+  font-size: 1rem;
+  color: var(--primary-dim);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-soft);
+}
+
+
+.thumb-large {
+  aspect-ratio: 16 / 9;
+  border: 1px dashed var(--border);
+  background-image: repeating-linear-gradient(
+          135deg,
+          var(--border) 0,
+          var(--border) 1px,
+          transparent 1px,
+          transparent 14px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb-large span {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-soft);
+  background: var(--bg);
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border);
+}

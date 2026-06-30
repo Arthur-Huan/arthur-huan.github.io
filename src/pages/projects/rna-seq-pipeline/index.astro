@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="RNA Seq Pipeline — Arthur Huan">
+  <main class="wrap project-page">
+    <a class="back" href="/#projects">← Back to projects</a>
+    <p class="eyebrow"></p>
+
+    <h1>RNA Seq Pipeline</h1>
+
+    <p class="note">
+      I developed a reproducible RNA-seq analysis pipeline that automates differential gene expression analysis from raw paired-end FASTQ files through statistical testing and visualization. Built with Snakemake for workflow orchestration and pixi for environment management, the pipeline integrates FastQC for quality control, Salmon for transcript quantification, tximport for gene-level count aggregation, and DESeq2 for differential expression analysis with log2 fold-change shrinkage.
+    </p>
+    <p class="note">
+      The pipeline generates analysis-ready outputs including gene count matrices, annotated differential expression tables, PCA plots, volcano plots, and heatmaps. Designed for small-to-medium RNA-seq experiments, it emphasizes reproducibility, modularity, and ease of configuration through a centralized YAML configuration file, making it straightforward to adapt to different datasets and experimental designs.
+    </p>
+  </main>
+</BaseLayout>
