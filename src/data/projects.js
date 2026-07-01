@@ -11,4 +11,16 @@ export const projects = [
     summary: '',
     thumbnail: '',
   },
+  {
+    slug: 'computer-vision',
+    title: 'Computer Vision with Machine Learning',
+    summary: '',
+    thumbnail: '',
+  },
+  {
+    slug: 'transport-data-analysis',
+    title: 'Calgary transport data analysis',
+    summary: '',
+    thumbnail: '',
+  },
 ];
