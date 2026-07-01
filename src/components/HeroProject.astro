@@ -1,0 +1,88 @@
+---
+---
+
+<a class="hero-project" href="/projects/course-tree/">
+    <div class="hero-thumb">
+        <img src="/images/course-tree/tree.png" alt="CourseTree screenshot"></img>
+    </div>
+    <div class="hero-body">
+        <p class="eyebrow">Featured project</p>
+        <h2 class="hero-title">CourseTree</h2>
+        <p class="hero-summary">Short description</p>
+        <span class="hero-link">View project →</span>
+    </div>
+</a>
+
+<style>
+    .hero-project {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-decoration: none;
+        color: var(--fg);
+        border: 1px solid var(--border);
+        background: var(--bg-raised);
+        margin-top: 2rem;
+        transition: border-color 0.15s ease;
+    }
+
+    .hero-project:hover {
+        border-color: var(--primary);
+    }
+
+    .hero-thumb {
+        aspect-ratio: 16 / 9;
+        border-right: 1px solid var(--border);
+        background-image: repeating-linear-gradient(
+                135deg,
+                var(--border) 0, var(--border) 1px,
+                transparent 1px, transparent 14px
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-thumb img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .thumb-label {
+        font-family: var(--font-mono),monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--fg-soft);
+        background: var(--bg-raised);
+        padding: 0.25rem 0.6rem;
+        border: 1px solid var(--border);
+    }
+
+    .hero-body {
+        padding: 2rem 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-family: var(--font-serif), serif;
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+        font-weight: 600;
+        line-height: 1.1;
+    }
+
+    .hero-summary {
+        color: var(--fg-soft);
+        font-size: 0.95rem;
+        max-width: 38ch;
+    }
+
+    .hero-link {
+        margin-top: 2rem;
+        font-family: var(--font-mono), monospace;
+        font-size: 1rem;
+        color: var(--primary-dim);
+    }
+</style>
